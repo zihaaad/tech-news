@@ -1,3 +1,10 @@
+import CategoriesList from "@/components/CategoriesList";
+
 export default function Home() {
-  return <h1>Project Init ...</h1>;
+  return (
+    <>
+      <CategoriesList />
+      <div>POST</div>
+    </>
+  );
 }
