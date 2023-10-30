@@ -12,7 +12,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body>
-        <div className="lg:max-w-[900px] lg:px-16 mx-auto py-8 shadow-xl min-h-screen flex flex-col px-8">
+        <div className="lg:max-w-7xl lg:px-16 mx-auto py-8 shadow-xl min-h-screen flex flex-col px-8">
           <Navbar />
           <div className="flex-auto">{children}</div>
           <Footer />
