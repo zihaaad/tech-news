@@ -1,5 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Tech News",
@@ -9,7 +11,13 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="lg:max-w-[900px] lg:px-16 mx-auto py-8 shadow-xl min-h-screen flex flex-col px-8">
+          <Navbar />
+          <div className="flex-auto">{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
