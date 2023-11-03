@@ -29,6 +29,7 @@ const Post = async ({
 }: PostProps) => {
   const session = await getServerSession(authOptions);
   const isEditable = session && session.user?.email === authorEmail;
+
   const dateObject = new Date(date);
   const options: Intl.DateTimeFormatOptions = {
     month: "short",
@@ -99,7 +100,7 @@ const Post = async ({
           <Link className="btn" href={`/edit-post/${id}`}>
             Edit
           </Link>
-          <DeleteBtn />
+          <DeleteBtn id={id} />
         </div>
       )}
     </div>
