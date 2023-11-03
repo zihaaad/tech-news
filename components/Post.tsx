@@ -42,8 +42,14 @@ const Post = async ({
   return (
     <div className="my-4 border-b border-b-300 py-8 ">
       <div className="mb-4">
-        Posted by: <span className="font-semibold">{author}</span> on{" "}
-        {foramattedDate}
+        {author ? (
+          <>
+            Posted by: <span className="font-semibold">{author}</span> on{" "}
+            {foramattedDate}
+          </>
+        ) : (
+          <>Posted on {foramattedDate}</>
+        )}
       </div>
       <div className="w-full h-72 relative">
         {thumbnail ? (
